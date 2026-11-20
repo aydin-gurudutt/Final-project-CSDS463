@@ -1,0 +1,2 @@
+/mnt/vstor/courses/csds463/kxd457/Final_project/mil_merging/train_soup3.py:130: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  bag_label = Variable(Tensor(np.array([label])))
