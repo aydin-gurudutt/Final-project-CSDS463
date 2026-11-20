@@ -1,390 +1,0 @@
-Model: DSMIL
-Job ID: 61082
-Node: class19t
-Start time: Thu Nov 19 00:21:21 EST 2026
-GPU: NVIDIA GeForce RTX 2080 Ti
-CUDA tensor test passed: torch.Size([100, 100])
-camelyon16 128 1
-0.0002
-0.005
-weights/dsmil/20261119002135322702
-Model: 0
- Epoch [1/5] train loss: 0.7061 test loss: 0.6826, average score: 0.6296, AUC: class-0>>0.5568181818181819
-Model: 0
- Epoch [2/5] train loss: 0.6735 test loss: 0.6778, average score: 0.6111, AUC: class-0>>0.5511363636363635
-Model: 0
- Epoch [3/5] train loss: 0.6690 test loss: 0.6809, average score: 0.5741, AUC: class-0>>0.5355113636363636
-Model: 0
- Epoch [4/5] train loss: 0.6646 test loss: 0.6716, average score: 0.6296, AUC: class-0>>0.5823863636363636
-Model: 0
- Epoch [5/5] train loss: 0.6576 test loss: 0.6737, average score: 0.6111, AUC: class-0>>0.5994318181818181
-Model: 1
- Epoch [1/5] train loss: 0.7040 test loss: 0.6825, average score: 0.6481, AUC: class-0>>0.5752840909090909
-Model: 1
- Epoch [2/5] train loss: 0.6745 test loss: 0.6770, average score: 0.6481, AUC: class-0>>0.5781249999999999
-Model: 1
- Epoch [3/5] train loss: 0.6732 test loss: 0.6739, average score: 0.6111, AUC: class-0>>0.5710227272727273
-Model: 1
- Epoch [4/5] train loss: 0.6601 test loss: 0.6909, average score: 0.6111, AUC: class-0>>0.5553977272727273
-Model: 1
- Epoch [5/5] train loss: 0.6621 test loss: 0.6686, average score: 0.6111, AUC: class-0>>0.6178977272727272
-Model: 2
- Epoch [1/5] train loss: 0.7031 test loss: 0.6801, average score: 0.6296, AUC: class-0>>0.5213068181818181
-Model: 2
- Epoch [2/5] train loss: 0.6731 test loss: 0.6771, average score: 0.6111, AUC: class-0>>0.5625
-Model: 2
- Epoch [3/5] train loss: 0.6714 test loss: 0.6744, average score: 0.5556, AUC: class-0>>0.5582386363636364
-Model: 2
- Epoch [4/5] train loss: 0.6607 test loss: 0.6869, average score: 0.5741, AUC: class-0>>0.5326704545454546
-Model: 2
- Epoch [5/5] train loss: 0.6615 test loss: 0.6807, average score: 0.6111, AUC: class-0>>0.5639204545454546
-Model: 3
- Epoch [1/5] train loss: 0.7017 test loss: 0.6742, average score: 0.6296, AUC: class-0>>0.5710227272727273
-Model: 3
- Epoch [2/5] train loss: 0.6741 test loss: 0.6723, average score: 0.5926, AUC: class-0>>0.5724431818181819
-Model: 3
- Epoch [3/5] train loss: 0.6679 test loss: 0.6750, average score: 0.6111, AUC: class-0>>0.5511363636363635
-Model: 3
- Epoch [4/5] train loss: 0.6621 test loss: 0.6749, average score: 0.5926, AUC: class-0>>0.5681818181818181
-Model: 3
- Epoch [5/5] train loss: 0.6505 test loss: 0.6785, average score: 0.6852, AUC: class-0>>0.6463068181818182
-Model: 4
- Epoch [1/5] train loss: 0.6984 test loss: 0.6828, average score: 0.6667, AUC: class-0>>0.5525568181818181
-Model: 4
- Epoch [2/5] train loss: 0.6745 test loss: 0.6738, average score: 0.6481, AUC: class-0>>0.5767045454545454
-Model: 4
- Epoch [3/5] train loss: 0.6683 test loss: 0.6834, average score: 0.6481, AUC: class-0>>0.5738636363636364
-Model: 4
- Epoch [4/5] train loss: 0.6674 test loss: 0.6732, average score: 0.6111, AUC: class-0>>0.6122159090909091
-Model: 4
- Epoch [5/5] train loss: 0.6540 test loss: 0.6949, average score: 0.6111, AUC: class-0>>0.5426136363636364
-Model: 5
- Epoch [1/5] train loss: 0.7051 test loss: 0.6760, average score: 0.6296, AUC: class-0>>0.546875
-Model: 5
- Epoch [2/5] train loss: 0.6723 test loss: 0.6744, average score: 0.6296, AUC: class-0>>0.5710227272727273
-Model: 5
- Epoch [3/5] train loss: 0.6656 test loss: 0.6990, average score: 0.6481, AUC: class-0>>0.5852272727272727
-Model: 5
- Epoch [4/5] train loss: 0.6690 test loss: 0.6740, average score: 0.5741, AUC: class-0>>0.5539772727272727
-Model: 5
- Epoch [5/5] train loss: 0.6604 test loss: 0.6821, average score: 0.5741, AUC: class-0>>0.5681818181818181
-Model: 6
- Epoch [1/5] train loss: 0.6957 test loss: 0.6785, average score: 0.6111, AUC: class-0>>0.5369318181818181
-Model: 6
- Epoch [2/5] train loss: 0.6735 test loss: 0.6723, average score: 0.6111, AUC: class-0>>0.5795454545454545
-Model: 6
- Epoch [3/5] train loss: 0.6667 test loss: 0.6766, average score: 0.6111, AUC: class-0>>0.5582386363636362
-Model: 6
- Epoch [4/5] train loss: 0.6680 test loss: 0.6742, average score: 0.5741, AUC: class-0>>0.5767045454545455
-Model: 6
- Epoch [5/5] train loss: 0.6536 test loss: 0.6943, average score: 0.5741, AUC: class-0>>0.5553977272727273
-Model: 7
- Epoch [1/5] train loss: 0.7002 test loss: 0.6746, average score: 0.6296, AUC: class-0>>0.5724431818181818
-Model: 7
- Epoch [2/5] train loss: 0.6733 test loss: 0.6727, average score: 0.6111, AUC: class-0>>0.5838068181818182
-Model: 7
- Epoch [3/5] train loss: 0.6675 test loss: 0.6812, average score: 0.5926, AUC: class-0>>0.5426136363636364
-Model: 7
- Epoch [4/5] train loss: 0.6654 test loss: 0.6811, average score: 0.5926, AUC: class-0>>0.5525568181818181
-Model: 7
- Epoch [5/5] train loss: 0.6570 test loss: 0.6717, average score: 0.6481, AUC: class-0>>0.6207386363636364
-Model: 8
- Epoch [1/5] train loss: 0.6945 test loss: 0.6802, average score: 0.5926, AUC: class-0>>0.5113636363636364
-Model: 8
- Epoch [2/5] train loss: 0.6717 test loss: 0.6819, average score: 0.5926, AUC: class-0>>0.5454545454545454
-Model: 8
- Epoch [3/5] train loss: 0.6685 test loss: 0.6725, average score: 0.5741, AUC: class-0>>0.5809659090909092
-Model: 8
- Epoch [4/5] train loss: 0.6620 test loss: 0.6729, average score: 0.6667, AUC: class-0>>0.6420454545454546
-Model: 8
- Epoch [5/5] train loss: 0.6568 test loss: 0.6697, average score: 0.6111, AUC: class-0>>0.6505681818181818
-Model: 9
- Epoch [1/5] train loss: 0.7059 test loss: 0.6769, average score: 0.6296, AUC: class-0>>0.578125
-Model: 9
- Epoch [2/5] train loss: 0.6740 test loss: 0.6750, average score: 0.5926, AUC: class-0>>0.5809659090909091
-Model: 9
- Epoch [3/5] train loss: 0.6653 test loss: 0.6906, average score: 0.5926, AUC: class-0>>0.5383522727272727
-Model: 9
- Epoch [4/5] train loss: 0.6659 test loss: 0.6881, average score: 0.6111, AUC: class-0>>0.5511363636363636
-Model: 9
- Epoch [5/5] train loss: 0.6627 test loss: 0.6757, average score: 0.5741, AUC: class-0>>0.5546875
-############################ BEST MODEL SELECTION #####################################
-[[0.55681818 0.55113636 0.53551136 0.58238636 0.59943182]
- [0.57528409 0.578125   0.57102273 0.55539773 0.61789773]
- [0.52130682 0.5625     0.55823864 0.53267045 0.56392045]
- [0.57102273 0.57244318 0.55113636 0.56818182 0.64630682]
- [0.55255682 0.57670455 0.57386364 0.61221591 0.54261364]
- [0.546875   0.57102273 0.58522727 0.55397727 0.56818182]
- [0.53693182 0.57954545 0.55823864 0.57670455 0.55539773]
- [0.57244318 0.58380682 0.54261364 0.55255682 0.62073864]
- [0.51136364 0.54545455 0.58096591 0.64204545 0.65056818]
- [0.578125   0.58096591 0.53835227 0.55113636 0.5546875 ]]
-[0 3 8]
-#######################################################################################
- Epoch [1/200] train loss: 0.6474 test loss: 0.6626, average score: 0.6111, AUC: class-0>>0.6463068181818181
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.3723507225513458
-
-Best Test Set with val threshold
-Test loss: 0.6373, Test average score: 0.6172, Test AUC: class-0>>0.6572110286320254
- Epoch [2/200] train loss: 0.6344 test loss: 0.6454, average score: 0.7407, AUC: class-0>>0.734375
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.4166415333747864
-
-Best Test Set with val threshold
-Test loss: 0.6297, Test average score: 0.6719, Test AUC: class-0>>0.6603923647932132
- Epoch [3/200] train loss: 0.6211 test loss: 0.6457, average score: 0.7222, AUC: class-0>>0.7357954545454546
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.4950917959213257
-
-Best Test Set with val threshold
-Test loss: 0.6339, Test average score: 0.6953, Test AUC: class-0>>0.6869034994697772
- Epoch [4/200] train loss: 0.6029 test loss: 0.6412, average score: 0.6481, AUC: class-0>>0.7102272727272727
- Epoch [5/200] train loss: 0.5925 test loss: 0.6467, average score: 0.7037, AUC: class-0>>0.6747159090909092
- Epoch [6/200] train loss: 0.5865 test loss: 0.6296, average score: 0.7593, AUC: class-0>>0.7173295454545455
- Epoch [7/200] train loss: 0.5744 test loss: 0.6217, average score: 0.7222, AUC: class-0>>0.7144886363636364
- Epoch [8/200] train loss: 0.5701 test loss: 0.6250, average score: 0.7222, AUC: class-0>>0.7059659090909092
- Epoch [9/200] train loss: 0.5543 test loss: 0.6240, average score: 0.7407, AUC: class-0>>0.7301136363636362
- Epoch [10/200] train loss: 0.5407 test loss: 0.6149, average score: 0.6852, AUC: class-0>>0.71875
- Epoch [11/200] train loss: 0.5443 test loss: 0.6087, average score: 0.6852, AUC: class-0>>0.7159090909090909
- Epoch [12/200] train loss: 0.5252 test loss: 0.6023, average score: 0.7593, AUC: class-0>>0.7286931818181818
- Epoch [13/200] train loss: 0.5254 test loss: 0.6127, average score: 0.7407, AUC: class-0>>0.71875
- Epoch [14/200] train loss: 0.5086 test loss: 0.6016, average score: 0.7778, AUC: class-0>>0.7414772727272727
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.5274757742881775
-
-Best Test Set with val threshold
-Test loss: 0.6054, Test average score: 0.7500, Test AUC: class-0>>0.6869034994697774
- Epoch [15/200] train loss: 0.5104 test loss: 0.6068, average score: 0.7593, AUC: class-0>>0.7329545454545454
- Epoch [16/200] train loss: 0.5054 test loss: 0.6170, average score: 0.7778, AUC: class-0>>0.7869318181818182
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.3998950719833374
-
-Best Test Set with val threshold
-Test loss: 0.6141, Test average score: 0.7266, Test AUC: class-0>>0.6916755037115588
- Epoch [17/200] train loss: 0.5082 test loss: 0.5982, average score: 0.7778, AUC: class-0>>0.7244318181818181
- Epoch [18/200] train loss: 0.4934 test loss: 0.5945, average score: 0.7778, AUC: class-0>>0.7400568181818181
- Epoch [19/200] train loss: 0.4917 test loss: 0.5718, average score: 0.7778, AUC: class-0>>0.7713068181818182
- Epoch [20/200] train loss: 0.4789 test loss: 0.5934, average score: 0.7778, AUC: class-0>>0.7215909090909091
- Epoch [21/200] train loss: 0.4874 test loss: 0.5810, average score: 0.7778, AUC: class-0>>0.7372159090909091
- Epoch [22/200] train loss: 0.4682 test loss: 0.5697, average score: 0.7778, AUC: class-0>>0.7840909090909091
- Epoch [23/200] train loss: 0.4739 test loss: 0.5640, average score: 0.7778, AUC: class-0>>0.7542613636363635
- Epoch [24/200] train loss: 0.4659 test loss: 0.5364, average score: 0.7778, AUC: class-0>>0.7840909090909092
- Epoch [25/200] train loss: 0.4676 test loss: 0.5624, average score: 0.7778, AUC: class-0>>0.7642045454545455
- Epoch [26/200] train loss: 0.4588 test loss: 0.5452, average score: 0.7778, AUC: class-0>>0.78125
- Epoch [27/200] train loss: 0.4601 test loss: 0.5726, average score: 0.7963, AUC: class-0>>0.7414772727272727
- Epoch [28/200] train loss: 0.4536 test loss: 0.5752, average score: 0.7778, AUC: class-0>>0.7613636363636364
- Epoch [29/200] train loss: 0.4462 test loss: 0.5489, average score: 0.7593, AUC: class-0>>0.7642045454545454
- Epoch [30/200] train loss: 0.4432 test loss: 0.6102, average score: 0.8148, AUC: class-0>>0.8238636363636362
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.3502271771430969
-
-Best Test Set with val threshold
-Test loss: 0.6993, Test average score: 0.7031, Test AUC: class-0>>0.6585365853658537
- Epoch [31/200] train loss: 0.4327 test loss: 0.5605, average score: 0.7593, AUC: class-0>>0.7784090909090908
- Epoch [32/200] train loss: 0.4195 test loss: 0.5663, average score: 0.7407, AUC: class-0>>0.7727272727272727
- Epoch [33/200] train loss: 0.4248 test loss: 0.5716, average score: 0.7778, AUC: class-0>>0.7542613636363638
- Epoch [34/200] train loss: 0.4224 test loss: 0.5853, average score: 0.7593, AUC: class-0>>0.7642045454545454
- Epoch [35/200] train loss: 0.4182 test loss: 0.5526, average score: 0.7593, AUC: class-0>>0.7698863636363636
- Epoch [36/200] train loss: 0.4088 test loss: 0.5576, average score: 0.7778, AUC: class-0>>0.7613636363636364
- Epoch [37/200] train loss: 0.3937 test loss: 0.6115, average score: 0.7963, AUC: class-0>>0.799715909090909
- Epoch [38/200] train loss: 0.4106 test loss: 0.5671, average score: 0.7963, AUC: class-0>>0.7698863636363638
- Epoch [39/200] train loss: 0.3962 test loss: 0.6200, average score: 0.7778, AUC: class-0>>0.7826704545454545
- Epoch [40/200] train loss: 0.3981 test loss: 0.5319, average score: 0.7778, AUC: class-0>>0.7911931818181818
- Epoch [41/200] train loss: 0.3962 test loss: 0.5275, average score: 0.7593, AUC: class-0>>0.7897727272727272
- Epoch [42/200] train loss: 0.3831 test loss: 0.5626, average score: 0.7778, AUC: class-0>>0.7727272727272727
- Epoch [43/200] train loss: 0.3874 test loss: 0.5360, average score: 0.7963, AUC: class-0>>0.7926136363636364
- Epoch [44/200] train loss: 0.3934 test loss: 0.5568, average score: 0.7593, AUC: class-0>>0.7784090909090908
- Epoch [45/200] train loss: 0.3926 test loss: 0.5619, average score: 0.7778, AUC: class-0>>0.7812499999999999
- Epoch [46/200] train loss: 0.3859 test loss: 0.5485, average score: 0.7778, AUC: class-0>>0.7926136363636364
- Epoch [47/200] train loss: 0.3812 test loss: 0.5295, average score: 0.7963, AUC: class-0>>0.7926136363636364
- Epoch [48/200] train loss: 0.3691 test loss: 0.5601, average score: 0.7778, AUC: class-0>>0.7784090909090908
- Epoch [49/200] train loss: 0.3841 test loss: 0.5768, average score: 0.7778, AUC: class-0>>0.7840909090909091
- Epoch [50/200] train loss: 0.3755 test loss: 0.5603, average score: 0.7963, AUC: class-0>>0.7869318181818181
- Epoch [51/200] train loss: 0.3708 test loss: 0.5399, average score: 0.7593, AUC: class-0>>0.7897727272727273
- Epoch [52/200] train loss: 0.3720 test loss: 0.5716, average score: 0.7963, AUC: class-0>>0.7897727272727272
- Epoch [53/200] train loss: 0.3669 test loss: 0.6037, average score: 0.7963, AUC: class-0>>0.7911931818181819
- Epoch [54/200] train loss: 0.3694 test loss: 0.5508, average score: 0.7778, AUC: class-0>>0.7755681818181818
- Epoch [55/200] train loss: 0.3536 test loss: 0.5156, average score: 0.7963, AUC: class-0>>0.8110795454545455
- Epoch [56/200] train loss: 0.3543 test loss: 0.5177, average score: 0.8333, AUC: class-0>>0.8238636363636365
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.3085287809371948
-
-Best Test Set with val threshold
-Test loss: 0.5463, Test average score: 0.7656, Test AUC: class-0>>0.7823435843054082
- Epoch [57/200] train loss: 0.3608 test loss: 0.5382, average score: 0.7593, AUC: class-0>>0.7997159090909091
- Epoch [58/200] train loss: 0.3527 test loss: 0.5775, average score: 0.7778, AUC: class-0>>0.796875
- Epoch [59/200] train loss: 0.3387 test loss: 0.6056, average score: 0.8148, AUC: class-0>>0.8139204545454546
- Epoch [60/200] train loss: 0.3649 test loss: 0.5638, average score: 0.7963, AUC: class-0>>0.8068181818181819
- Epoch [61/200] train loss: 0.3501 test loss: 0.5744, average score: 0.8148, AUC: class-0>>0.8125
- Epoch [62/200] train loss: 0.3489 test loss: 0.5865, average score: 0.7963, AUC: class-0>>0.8181818181818182
- Epoch [63/200] train loss: 0.3421 test loss: 0.5279, average score: 0.7963, AUC: class-0>>0.8139204545454546
- Epoch [64/200] train loss: 0.3488 test loss: 0.5369, average score: 0.8333, AUC: class-0>>0.8267045454545454
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.339105486869812
-
-Best Test Set with val threshold
-Test loss: 0.5682, Test average score: 0.7578, Test AUC: class-0>>0.7733297985153765
- Epoch [65/200] train loss: 0.3481 test loss: 0.5610, average score: 0.7963, AUC: class-0>>0.8082386363636364
- Epoch [66/200] train loss: 0.3328 test loss: 0.5653, average score: 0.7407, AUC: class-0>>0.7911931818181818
- Epoch [67/200] train loss: 0.3463 test loss: 0.5321, average score: 0.7963, AUC: class-0>>0.8210227272727273
- Epoch [68/200] train loss: 0.3411 test loss: 0.5738, average score: 0.8148, AUC: class-0>>0.8153409090909092
- Epoch [69/200] train loss: 0.3441 test loss: 0.5266, average score: 0.8333, AUC: class-0>>0.8252840909090909
- Epoch [70/200] train loss: 0.3358 test loss: 0.5642, average score: 0.7778, AUC: class-0>>0.7826704545454546
- Epoch [71/200] train loss: 0.3397 test loss: 0.5483, average score: 0.8148, AUC: class-0>>0.8196022727272727
- Epoch [72/200] train loss: 0.3398 test loss: 0.5559, average score: 0.8148, AUC: class-0>>0.8238636363636365
- Epoch [73/200] train loss: 0.3386 test loss: 0.5622, average score: 0.7593, AUC: class-0>>0.7940340909090908
- Epoch [74/200] train loss: 0.3292 test loss: 0.5163, average score: 0.7963, AUC: class-0>>0.8252840909090909
- Epoch [75/200] train loss: 0.3358 test loss: 0.5462, average score: 0.8519, AUC: class-0>>0.8338068181818181
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.26661229133605957
-
-Best Test Set with val threshold
-Test loss: 0.5752, Test average score: 0.7500, Test AUC: class-0>>0.7775715800636267
- Epoch [76/200] train loss: 0.3346 test loss: 0.5455, average score: 0.7963, AUC: class-0>>0.8025568181818181
- Epoch [77/200] train loss: 0.3314 test loss: 0.5888, average score: 0.7778, AUC: class-0>>0.7954545454545454
- Epoch [78/200] train loss: 0.3234 test loss: 0.6232, average score: 0.7963, AUC: class-0>>0.8025568181818181
- Epoch [79/200] train loss: 0.3256 test loss: 0.5717, average score: 0.7963, AUC: class-0>>0.8096590909090908
- Epoch [80/200] train loss: 0.3171 test loss: 0.6040, average score: 0.8519, AUC: class-0>>0.8323863636363636
- Epoch [81/200] train loss: 0.3268 test loss: 0.5186, average score: 0.7963, AUC: class-0>>0.8295454545454545
- Epoch [82/200] train loss: 0.3219 test loss: 0.5734, average score: 0.7963, AUC: class-0>>0.8210227272727273
- Epoch [83/200] train loss: 0.3161 test loss: 0.5745, average score: 0.7778, AUC: class-0>>0.7954545454545454
- Epoch [84/200] train loss: 0.3157 test loss: 0.5539, average score: 0.7963, AUC: class-0>>0.8167613636363636
- Epoch [85/200] train loss: 0.3217 test loss: 0.6030, average score: 0.7778, AUC: class-0>>0.8196022727272727
- Epoch [86/200] train loss: 0.3296 test loss: 0.6234, average score: 0.7593, AUC: class-0>>0.7954545454545454
- Epoch [87/200] train loss: 0.3105 test loss: 0.6171, average score: 0.8333, AUC: class-0>>0.8252840909090909
- Epoch [88/200] train loss: 0.3169 test loss: 0.5963, average score: 0.7778, AUC: class-0>>0.8068181818181819
- Epoch [89/200] train loss: 0.3075 test loss: 0.5848, average score: 0.7778, AUC: class-0>>0.7869318181818182
- Epoch [90/200] train loss: 0.3117 test loss: 0.6004, average score: 0.7407, AUC: class-0>>0.7982954545454546
- Epoch [91/200] train loss: 0.3087 test loss: 0.6049, average score: 0.7778, AUC: class-0>>0.8039772727272727
- Epoch [92/200] train loss: 0.3109 test loss: 0.6214, average score: 0.7963, AUC: class-0>>0.8196022727272727
- Epoch [93/200] train loss: 0.3115 test loss: 0.5283, average score: 0.7963, AUC: class-0>>0.8323863636363635
- Epoch [94/200] train loss: 0.3074 test loss: 0.5517, average score: 0.7963, AUC: class-0>>0.8281250000000001
- Epoch [95/200] train loss: 0.3088 test loss: 0.5410, average score: 0.7963, AUC: class-0>>0.84375
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.24360081553459167
-
-Best Test Set with val threshold
-Test loss: 0.5791, Test average score: 0.7266, Test AUC: class-0>>0.778897136797455
- Epoch [96/200] train loss: 0.3044 test loss: 0.5647, average score: 0.7963, AUC: class-0>>0.8352272727272728
- Epoch [97/200] train loss: 0.3107 test loss: 0.5684, average score: 0.7963, AUC: class-0>>0.8352272727272727
- Epoch [98/200] train loss: 0.3031 test loss: 0.5740, average score: 0.8148, AUC: class-0>>0.8380681818181818
- Epoch [99/200] train loss: 0.3001 test loss: 0.6357, average score: 0.7963, AUC: class-0>>0.8053977272727273
- Epoch [100/200] train loss: 0.3021 test loss: 0.5718, average score: 0.7778, AUC: class-0>>0.8110795454545454
- Epoch [101/200] train loss: 0.2953 test loss: 0.6173, average score: 0.7778, AUC: class-0>>0.8039772727272727
- Epoch [102/200] train loss: 0.2938 test loss: 0.6188, average score: 0.8148, AUC: class-0>>0.8380681818181819
- Epoch [103/200] train loss: 0.2987 test loss: 0.5677, average score: 0.7593, AUC: class-0>>0.8068181818181818
- Epoch [104/200] train loss: 0.2988 test loss: 0.5559, average score: 0.7963, AUC: class-0>>0.8323863636363636
- Epoch [105/200] train loss: 0.2858 test loss: 0.6014, average score: 0.7778, AUC: class-0>>0.8125
- Epoch [106/200] train loss: 0.2919 test loss: 0.5668, average score: 0.7778, AUC: class-0>>0.8252840909090909
- Epoch [107/200] train loss: 0.2892 test loss: 0.5879, average score: 0.7963, AUC: class-0>>0.8338068181818182
- Epoch [108/200] train loss: 0.2909 test loss: 0.5520, average score: 0.7778, AUC: class-0>>0.8423295454545455
- Epoch [109/200] train loss: 0.2897 test loss: 0.6121, average score: 0.7778, AUC: class-0>>0.8125
- Epoch [110/200] train loss: 0.2904 test loss: 0.6032, average score: 0.8148, AUC: class-0>>0.8394886363636364
- Epoch [111/200] train loss: 0.2915 test loss: 0.5554, average score: 0.7778, AUC: class-0>>0.8380681818181819
- Epoch [112/200] train loss: 0.2930 test loss: 0.6238, average score: 0.7963, AUC: class-0>>0.8167613636363636
- Epoch [113/200] train loss: 0.2906 test loss: 0.6111, average score: 0.7778, AUC: class-0>>0.8267045454545455
- Epoch [114/200] train loss: 0.2977 test loss: 0.5965, average score: 0.7963, AUC: class-0>>0.8267045454545455
- Epoch [115/200] train loss: 0.2861 test loss: 0.6291, average score: 0.7963, AUC: class-0>>0.8267045454545454
- Epoch [116/200] train loss: 0.2853 test loss: 0.6225, average score: 0.7963, AUC: class-0>>0.8267045454545454
- Epoch [117/200] train loss: 0.2885 test loss: 0.5927, average score: 0.7778, AUC: class-0>>0.8167613636363636
- Epoch [118/200] train loss: 0.2835 test loss: 0.5833, average score: 0.7778, AUC: class-0>>0.8295454545454545
- Epoch [119/200] train loss: 0.2784 test loss: 0.5349, average score: 0.7593, AUC: class-0>>0.8394886363636364
- Epoch [120/200] train loss: 0.2855 test loss: 0.6327, average score: 0.7963, AUC: class-0>>0.8380681818181819
- Epoch [121/200] train loss: 0.2831 test loss: 0.5876, average score: 0.8148, AUC: class-0>>0.8409090909090909
- Epoch [122/200] train loss: 0.2831 test loss: 0.5853, average score: 0.7778, AUC: class-0>>0.8295454545454546
- Epoch [123/200] train loss: 0.2808 test loss: 0.6168, average score: 0.7963, AUC: class-0>>0.8338068181818182
- Epoch [124/200] train loss: 0.2774 test loss: 0.5875, average score: 0.7593, AUC: class-0>>0.8238636363636364
- Epoch [125/200] train loss: 0.2886 test loss: 0.5930, average score: 0.7778, AUC: class-0>>0.8281249999999999
- Epoch [126/200] train loss: 0.2752 test loss: 0.5758, average score: 0.8148, AUC: class-0>>0.8423295454545454
- Epoch [127/200] train loss: 0.2899 test loss: 0.6072, average score: 0.7963, AUC: class-0>>0.8451704545454545
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.2293119579553604
-
-Best Test Set with val threshold
-Test loss: 0.6607, Test average score: 0.7188, Test AUC: class-0>>0.7696182396606576
- Epoch [128/200] train loss: 0.2844 test loss: 0.5865, average score: 0.7778, AUC: class-0>>0.8295454545454546
- Epoch [129/200] train loss: 0.2890 test loss: 0.5897, average score: 0.7778, AUC: class-0>>0.8394886363636364
- Epoch [130/200] train loss: 0.2847 test loss: 0.5895, average score: 0.7963, AUC: class-0>>0.8196022727272727
- Epoch [131/200] train loss: 0.2775 test loss: 0.6001, average score: 0.8148, AUC: class-0>>0.8451704545454545
- Epoch [132/200] train loss: 0.2791 test loss: 0.6155, average score: 0.7963, AUC: class-0>>0.8224431818181819
- Epoch [133/200] train loss: 0.2738 test loss: 0.6137, average score: 0.8148, AUC: class-0>>0.8480113636363636
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.19890104234218597
-
-Best Test Set with val threshold
-Test loss: 0.6446, Test average score: 0.7500, Test AUC: class-0>>0.7773064687168613
- Epoch [134/200] train loss: 0.2732 test loss: 0.6079, average score: 0.7593, AUC: class-0>>0.8110795454545455
- Epoch [135/200] train loss: 0.2802 test loss: 0.5778, average score: 0.7778, AUC: class-0>>0.8394886363636364
- Epoch [136/200] train loss: 0.2764 test loss: 0.5685, average score: 0.7593, AUC: class-0>>0.8267045454545454
- Epoch [137/200] train loss: 0.2711 test loss: 0.5896, average score: 0.7963, AUC: class-0>>0.8451704545454545
- Epoch [138/200] train loss: 0.2760 test loss: 0.6072, average score: 0.7778, AUC: class-0>>0.8252840909090909
- Epoch [139/200] train loss: 0.2682 test loss: 0.5782, average score: 0.7963, AUC: class-0>>0.8124999999999999
- Epoch [140/200] train loss: 0.2738 test loss: 0.6124, average score: 0.7963, AUC: class-0>>0.828125
- Epoch [141/200] train loss: 0.2784 test loss: 0.6120, average score: 0.7963, AUC: class-0>>0.8267045454545454
- Epoch [142/200] train loss: 0.2735 test loss: 0.6004, average score: 0.7778, AUC: class-0>>0.8323863636363636
- Epoch [143/200] train loss: 0.2724 test loss: 0.6238, average score: 0.7778, AUC: class-0>>0.8196022727272727
- Epoch [144/200] train loss: 0.2729 test loss: 0.6045, average score: 0.7778, AUC: class-0>>0.8196022727272728
- Epoch [145/200] train loss: 0.2686 test loss: 0.5914, average score: 0.7778, AUC: class-0>>0.8366477272727272
- Epoch [146/200] train loss: 0.2721 test loss: 0.5981, average score: 0.7778, AUC: class-0>>0.8238636363636364
- Epoch [147/200] train loss: 0.2743 test loss: 0.5843, average score: 0.7963, AUC: class-0>>0.828125
- Epoch [148/200] train loss: 0.2767 test loss: 0.6019, average score: 0.7778, AUC: class-0>>0.8338068181818181
- Epoch [149/200] train loss: 0.2718 test loss: 0.6370, average score: 0.7778, AUC: class-0>>0.828125
- Epoch [150/200] train loss: 0.2710 test loss: 0.6052, average score: 0.7778, AUC: class-0>>0.8167613636363636
- Epoch [151/200] train loss: 0.2714 test loss: 0.5999, average score: 0.7778, AUC: class-0>>0.828125
- Epoch [152/200] train loss: 0.2691 test loss: 0.6115, average score: 0.8148, AUC: class-0>>0.84375
- Epoch [153/200] train loss: 0.2705 test loss: 0.6194, average score: 0.7963, AUC: class-0>>0.8451704545454546
- Epoch [154/200] train loss: 0.2712 test loss: 0.6038, average score: 0.7963, AUC: class-0>>0.8394886363636364
- Epoch [155/200] train loss: 0.2667 test loss: 0.6056, average score: 0.7963, AUC: class-0>>0.8352272727272727
- Epoch [156/200] train loss: 0.2677 test loss: 0.6023, average score: 0.7963, AUC: class-0>>0.8352272727272727
- Epoch [157/200] train loss: 0.2646 test loss: 0.6117, average score: 0.7778, AUC: class-0>>0.8224431818181819
- Epoch [158/200] train loss: 0.2697 test loss: 0.6118, average score: 0.7963, AUC: class-0>>0.828125
- Epoch [159/200] train loss: 0.2640 test loss: 0.5829, average score: 0.8148, AUC: class-0>>0.8494318181818181
-Best model saved at: weights/dsmil/20261119002135322702/1.pth
-Best thresholds ===>>> class-0>>0.27555686235427856
-
-Best Test Set with val threshold
-Test loss: 0.6532, Test average score: 0.7578, Test AUC: class-0>>0.7733297985153765
- Epoch [160/200] train loss: 0.2687 test loss: 0.5944, average score: 0.7778, AUC: class-0>>0.8352272727272727
- Epoch [161/200] train loss: 0.2682 test loss: 0.6150, average score: 0.7778, AUC: class-0>>0.8338068181818182
- Epoch [162/200] train loss: 0.2659 test loss: 0.6026, average score: 0.7778, AUC: class-0>>0.8267045454545454
- Epoch [163/200] train loss: 0.2673 test loss: 0.6053, average score: 0.7778, AUC: class-0>>0.8323863636363636
- Epoch [164/200] train loss: 0.2637 test loss: 0.5979, average score: 0.8148, AUC: class-0>>0.84375
- Epoch [165/200] train loss: 0.2672 test loss: 0.6079, average score: 0.7778, AUC: class-0>>0.8323863636363636
- Epoch [166/200] train loss: 0.2653 test loss: 0.6191, average score: 0.7778, AUC: class-0>>0.8394886363636364
- Epoch [167/200] train loss: 0.2640 test loss: 0.5973, average score: 0.7963, AUC: class-0>>0.828125
- Epoch [168/200] train loss: 0.2613 test loss: 0.6121, average score: 0.7778, AUC: class-0>>0.8352272727272728
- Epoch [169/200] train loss: 0.2649 test loss: 0.5914, average score: 0.7778, AUC: class-0>>0.8380681818181818
- Epoch [170/200] train loss: 0.2664 test loss: 0.6025, average score: 0.7778, AUC: class-0>>0.8366477272727272
- Epoch [171/200] train loss: 0.2669 test loss: 0.5954, average score: 0.7778, AUC: class-0>>0.8366477272727272
- Epoch [172/200] train loss: 0.2609 test loss: 0.6155, average score: 0.7778, AUC: class-0>>0.8252840909090909
- Epoch [173/200] train loss: 0.2626 test loss: 0.6149, average score: 0.7963, AUC: class-0>>0.8352272727272727
- Epoch [174/200] train loss: 0.2659 test loss: 0.6043, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [175/200] train loss: 0.2641 test loss: 0.6179, average score: 0.7963, AUC: class-0>>0.8309659090909091
- Epoch [176/200] train loss: 0.2656 test loss: 0.6104, average score: 0.7963, AUC: class-0>>0.8338068181818182
- Epoch [177/200] train loss: 0.2648 test loss: 0.6063, average score: 0.7778, AUC: class-0>>0.8338068181818182
- Epoch [178/200] train loss: 0.2671 test loss: 0.6078, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [179/200] train loss: 0.2605 test loss: 0.6024, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [180/200] train loss: 0.2627 test loss: 0.6004, average score: 0.7963, AUC: class-0>>0.8338068181818181
- Epoch [181/200] train loss: 0.2620 test loss: 0.5985, average score: 0.7963, AUC: class-0>>0.8323863636363636
- Epoch [182/200] train loss: 0.2633 test loss: 0.6076, average score: 0.7778, AUC: class-0>>0.8338068181818182
- Epoch [183/200] train loss: 0.2640 test loss: 0.6018, average score: 0.7778, AUC: class-0>>0.8366477272727272
- Epoch [184/200] train loss: 0.2631 test loss: 0.5984, average score: 0.7778, AUC: class-0>>0.8394886363636364
- Epoch [185/200] train loss: 0.2627 test loss: 0.6007, average score: 0.7963, AUC: class-0>>0.8352272727272727
- Epoch [186/200] train loss: 0.2620 test loss: 0.6016, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [187/200] train loss: 0.2635 test loss: 0.6020, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [188/200] train loss: 0.2618 test loss: 0.6028, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [189/200] train loss: 0.2627 test loss: 0.6021, average score: 0.7778, AUC: class-0>>0.8366477272727272
- Epoch [190/200] train loss: 0.2623 test loss: 0.6039, average score: 0.7963, AUC: class-0>>0.8394886363636364
- Epoch [191/200] train loss: 0.2584 test loss: 0.6047, average score: 0.7778, AUC: class-0>>0.8338068181818182
- Epoch [192/200] train loss: 0.2627 test loss: 0.6055, average score: 0.7778, AUC: class-0>>0.8338068181818182
- Epoch [193/200] train loss: 0.2614 test loss: 0.6063, average score: 0.7778, AUC: class-0>>0.8338068181818182
- Epoch [194/200] train loss: 0.2616 test loss: 0.6063, average score: 0.7778, AUC: class-0>>0.8352272727272726
- Epoch [195/200] train loss: 0.2585 test loss: 0.6058, average score: 0.7963, AUC: class-0>>0.8394886363636364
- Epoch [196/200] train loss: 0.2588 test loss: 0.6046, average score: 0.7963, AUC: class-0>>0.8394886363636364
- Epoch [197/200] train loss: 0.2585 test loss: 0.6016, average score: 0.7963, AUC: class-0>>0.8394886363636364
- Epoch [198/200] train loss: 0.2624 test loss: 0.6054, average score: 0.7963, AUC: class-0>>0.8366477272727272
- Epoch [199/200] train loss: 0.2591 test loss: 0.6067, average score: 0.7778, AUC: class-0>>0.8338068181818182
-Last model Test
-Test loss: 0.6991, Test average score: 0.7031, Test AUC: class-0>>0.7600742311770944
-DSMIL training completed successfully at Thu Nov 19 03:34:09 EST 2026
