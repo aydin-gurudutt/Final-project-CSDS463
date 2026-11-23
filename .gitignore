@@ -1,0 +1,31 @@
+# Python environment and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# HPC output
+logs/
+slurm-*.out
+slurm-*.err
+
+# Datasets and generated model weights
+datasets/
+weights/
+*.pth
+*.pt
+*.ckpt
+*.npz
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporary files
+.DS_Store
+*.swp
