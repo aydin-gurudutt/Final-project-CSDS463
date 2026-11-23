@@ -1,0 +1,13 @@
+architecture,seed,lambda,test_auc,test_samples,checkpoint
+clam,1,0.0,0.7932131495227996,128,weights/clam/20261122212201489441/fusion_results/lambda_0.0_seed_1/best_validation.pth
+clam,1,0.5,0.7401908801696713,128,weights/clam/20261122212201489441/fusion_results/lambda_0.5_seed_1/best_validation.pth
+clam,2,0.0,0.6948568398727466,128,weights/clam/20261123122950019167/fusion_results/lambda_0.0_seed_2/best_validation.pth
+clam,2,0.5,0.6948568398727466,128,weights/clam/20261123122950019167/fusion_results/lambda_0.5_seed_2/best_validation.pth
+clam,3,0.0,0.6956521739130433,128,weights/clam/20261123122950435501/fusion_results/lambda_0.0_seed_3/best_validation.pth
+clam,3,0.5,0.6959172852598091,128,weights/clam/20261123122950435501/fusion_results/lambda_0.5_seed_3/best_validation.pth
+dsmil,1,0.0,0.6243372216330859,128,weights/dsmil/20261123114547431845/fusion_results/lambda_0.0_seed_1/best_validation.pth
+dsmil,1,5.0,0.6283138918345704,128,weights/dsmil/20261123114547431845/fusion_results/lambda_5.0_seed_1/best_validation.pth
+dsmil,2,0.0,0.5617709437963945,128,weights/dsmil/20261123123022171992/fusion_results/lambda_0.0_seed_2/best_validation.pth
+dsmil,2,5.0,0.5617709437963945,128,weights/dsmil/20261123123022171992/fusion_results/lambda_5.0_seed_2/best_validation.pth
+dsmil,3,0.0,0.6755037115588548,128,weights/dsmil/20261123123007990510/fusion_results/lambda_0.0_seed_3/best_validation.pth
+dsmil,3,5.0,0.6755037115588548,128,weights/dsmil/20261123123007990510/fusion_results/lambda_5.0_seed_3/best_validation.pth
