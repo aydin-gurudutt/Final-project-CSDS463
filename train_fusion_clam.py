@@ -43,7 +43,12 @@ def main():
     output_dir = Path(args.output_dir)
 
     assert checkpoint.is_file(), checkpoint
-    output_dir.mkdir(parents=True, exist_ok=True)
+
+    if output_dir.exists():
+        raise FileExistsError(
+            f"Output directory already exists: {output_dir}"
+        )
+    output_dir.mkdir(parents=True)
 
     random.seed(args.seed)
     np.random.seed(args.seed)
