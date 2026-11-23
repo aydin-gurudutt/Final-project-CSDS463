@@ -217,6 +217,7 @@ The experiment does **not** provide sufficient evidence that stability-aware can
 | `train_fusion_dsmil.py` | DSMIL post-merge training |
 | `evaluate_heldout.py` | Final held-out test evaluation |
 | `make_final_results.py` | Aggregate results and generate figures |
+| `verify_published_results.py` | Validate committed CSV consistency without model checkpoints or extra Python packages |
 
 ### Workflow and experiment scripts
 
@@ -376,6 +377,16 @@ python make_final_results.py
 This creates the summary tables and the two comparison figures.
 
 The committed CSV files and figures can be inspected directly without rerunning model training.
+
+### 7.8 Verify the published CSV results (no GPU required)
+
+The repository includes a dependency-free consistency checker for the committed output tables:
+
+```bash
+python verify_published_results.py
+```
+
+It checks the 12 seed/method combinations, each architecture's three seeds, the expected stability coefficients, the published means and **sample** standard deviations, the held-out test AUCs, and the recorded 128-slide evaluation size. This verifies the internal consistency of the published CSVs only; it does not independently confirm split integrity, re-run inference, or reproduce model training.
 
 ## 8. Limitations
 
