@@ -1,0 +1,8 @@
+architecture,seed,stage,slurm_job_id,elapsed_hhmmss,elapsed_seconds,state,exit_code
+CLAM,1,standalone_train,4313829,00:03:53,233,COMPLETED,0:0
+CLAM,2,standalone_train,4313830,00:03:57,237,COMPLETED,0:0
+CLAM,3,standalone_train,4313831,00:03:01,181,COMPLETED,0:0
+DSMIL,1,standalone_train,4313832,00:03:24,204,COMPLETED,0:0
+DSMIL,2,standalone_train,4313833,00:03:25,205,COMPLETED,0:0
+DSMIL,3,standalone_train,4313834,00:03:17,197,COMPLETED,0:0
+ALL,,standalone_eval_all,4313835,00:03:48,228,COMPLETED,0:0
