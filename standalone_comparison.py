@@ -14,8 +14,21 @@ import subprocess
 import sys
 from pathlib import Path
 
-import numpy as np
-from evaluate_heldout import RUNS
+# Keep run identifiers as lightweight metadata so 'summarize' needs only Python's
+# standard library, without importing the GPU evaluation stack.
+# 'evaluate' asserts that these IDs match evaluate_heldout.RUNS.
+RUNS = {
+    "clam": {
+        1: "20261122212201489441",
+        2: "20261123122950019167",
+        3: "20261123122950435501",
+    },
+    "dsmil": {
+        1: "20261123114547431845",
+        2: "20261123123022171992",
+        3: "20261123123007990510",
+    },
+}
 
 
 def run_dir(architecture, seed):
@@ -27,6 +40,7 @@ def output_dir(architecture, seed):
 
 
 def select_candidate(architecture, seed):
+    import numpy as np
     root = run_dir(architecture, seed)
     path = root / "candidate_histories.npz"
     with np.load(path, allow_pickle=False) as archive:
@@ -74,10 +88,13 @@ def train(architecture, seed):
 
 
 def evaluate():
+    import numpy as np
     import pandas as pd
     import torch
     from sklearn.metrics import roc_auc_score
     import evaluate_heldout as original
+    if RUNS != original.RUNS:
+        raise ValueError("Standalone/evaluator run ID configuration mismatch")
 
     result = Path("heldout_evaluation/standalone_auc_results.csv")
     if result.exists():
