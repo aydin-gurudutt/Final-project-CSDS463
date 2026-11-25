@@ -16,5 +16,7 @@ jobs:
         run: python verify_published_results.py
       - name: Validate extended statistics and SLURM durations
         run: python verify_project2_additions.py
+      - name: Verify completed three-way MIL comparison
+        run: python verify_three_way.py
       - name: Check standalone experiment syntax
         run: python -m py_compile standalone_comparison.py
