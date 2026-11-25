@@ -429,3 +429,12 @@ This repository builds on the contributions of the original course project and u
 - **Research context:** Mammadov et al., *Reducing Variability of Multiple Instance Learning Methods for Digital Pathology*, MICCAI 2025.
 
 The original baseline work and implementations are acknowledged separately from the stability-aware selection, reproducibility, and held-out evaluation experiments documented here.
+
+
+## Project 2 completion audit and additional evaluation
+
+The proposal-requested **minimum held-out test AUC** and **highest validation-selected AUC** are now available for each CLAM/DSMIL fusion method in [`final_results/performance_extended.csv`](final_results/performance_extended.csv). Archived SLURM per-run timings and partial runtime summaries are in [`final_results/training_job_times.csv`](final_results/training_job_times.csv) and [`final_results/timing_summary.csv`](final_results/timing_summary.csv). See [results provenance](final_results/PROVENANCE.md) for definitions, original job IDs, and limitations; these timings exclude offline merging and final inference.
+
+The original proposal additionally called for a **non-fused standalone MIL** comparator, which is not part of the previously published 12-model fusion evaluation. [`standalone_comparison.py`](standalone_comparison.py) and [`standalone_comparison.slurm`](standalone_comparison.slurm) implement that missing matched experiment using the original five candidate models per seed, selecting the best one by early weighted mean validation AUC and continuing it for the same two epochs **without merging**. Its six GPU runs and measured test AUCs are still **pending**, and must not be replaced with the historical ABMIL single-run result. After the jobs have been completed, `python3 standalone_comparison.py summarize` generates a three-way comparison.
+
+A detailed [Project 2 completion and submission checklist](PROJECT2_COMPLETION.md) tracks experimental, reporting, attribution, and Canvas requirements. Generate a source-code submission archive locally with `bash package_project2_code.sh` after synchronizing the repository with Pioneer. Neither the compiled course report nor its PowerPoint presentation is part of this source-only Git repository as of this update.
