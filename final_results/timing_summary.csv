@@ -1,0 +1,5 @@
+architecture,method,n_seeds,candidate_mean_seconds,candidate_sd_seconds,fusion_mean_seconds,fusion_sd_seconds,candidate_plus_fusion_mean_seconds,scope_note
+CLAM,Baseline,3,1150.666666666667,43.75309512861156,216.3333333333333,81.20550063470660,1367.000000000000,Excludes offline merging and final inference
+CLAM,Stability-aware,3,1150.666666666667,43.75309512861156,160.3333333333333,55.41058863911602,1311.000000000000,Excludes offline merging and final inference
+DSMIL,Baseline,3,1242.333333333333,381.3664029949850,126.6666666666667,35.83759664560856,1369.000000000000,Excludes offline merging and final inference
+DSMIL,Stability-aware,3,1242.333333333333,381.3664029949850,133.0000000000000,11.13552872566004,1375.333333333333,Excludes offline merging and final inference
