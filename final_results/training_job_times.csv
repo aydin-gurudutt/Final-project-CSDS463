@@ -1,0 +1,19 @@
+architecture,seed,stage,slurm_job_id,elapsed_hhmmss,elapsed_seconds,state,exit_code,provenance
+CLAM,1,candidate,4305904,00:18:23,1103,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,2,candidate,4307676,00:19:20,1160,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,3,candidate,4307677,00:19:49,1189,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,1,candidate,4307579,00:13:22,802,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,2,candidate,4307678,00:24:27,1467,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,3,candidate,4307679,00:24:18,1458,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,1,baseline_fusion,4307331,00:04:54,294,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,1,stability_fusion,4307332,00:02:03,123,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,2,baseline_fusion,4307745,00:03:43,223,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,2,stability_fusion,4307746,00:03:44,224,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,3,baseline_fusion,4307747,00:02:12,132,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+CLAM,3,stability_fusion,4307748,00:02:14,134,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,1,baseline_fusion,4307656,00:01:34,94,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,1,stability_fusion,4307657,00:02:11,131,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,2,baseline_fusion,4307749,00:02:45,165,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,2,stability_fusion,4307750,00:02:25,145,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,3,baseline_fusion,4307751,00:02:01,121,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
+DSMIL,3,stability_fusion,4307752,00:02:03,123,COMPLETED,0:0,Archived Pioneer sacct logs 2026-11-23
