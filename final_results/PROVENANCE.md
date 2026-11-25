@@ -1,36 +1,36 @@
-# Extended Project 2 results: definitions and provenance
+# Project 2 experimental results: provenance
 
-The previously published `all_results.csv`, `summary.csv`, and `test_auc_results.csv` are unchanged.
+All reported AUCs are **held-out slide-level ROC AUC**, using the original 128-slide CAMELYON16 test split. Three random seeds were used for each of CLAM and DSMIL under three methods: **standalone** (one candidate, no merge), **baseline fusion** (top-three candidates), and **stability-aware fusion** (top-three candidates with early-validation stability penalty).
 
-**performance_extended.csv** is derived from 12 published seed-level observations in `all_results.csv`. For each architecture and method, it includes test mean, **sample** standard deviation (n=3), minimum test AUC across seeds, and highest validation-selected AUC across seeds. These are derived statistics, not new model evaluations.
+## Result tables
 
-**training_job_times.csv** records 18 completed Pioneer SLURM jobs from archived November 23, 2026 terminal logs (all status COMPLETED, exit 0:0). Six runs generated five candidates each, and 12 runs continued baseline/stability-aware fusion. The table provides architecture, seed, job ID, stage, and elapsed seconds.
+- [`final_results/all_results.csv`](all_results.csv): The 12 original baseline/stability-aware fusion test and validation AUCs; no original values were changed.
+- [`final_results/summary.csv`](summary.csv) and [`final_results/performance_extended.csv`](performance_extended.csv): Fusion performance mean, sample SD, minimum test AUC, and highest validation-selected AUC across three seeds.
+- [`heldout_evaluation/standalone_auc_results.csv`](../heldout_evaluation/standalone_auc_results.csv): Six **measured** standalone AUCs for CLAM/DSMIL, seeds 1–3. All test sample counts are 128. Each row includes the corresponding untracked checkpoint path.
+- [`final_results/three_way_summary.csv`](three_way_summary.csv): Six-row comparison (2 architectures × 3 methods), including mean, sample SD, minimum held-out test AUC, and highest validation-selected AUC.
 
-**timing_summary.csv** aggregates those elapsed durations by seed. Candidate generation is shared by both fusion methods, and must not be double-counted in the combined experimental GPU budget. The candidate+continuation elapsed time excludes offline merging, queue waiting, environment setup and held-out inference. The joint final evaluator (job 4307791, elapsed 00:05:30) evaluated all 12 models together and should not be assigned to one method.
+The standalone best validation AUC in the six-row table comes from each run's `history.json`; those private checkpoint histories are not tracked on GitHub, so only range and structural checks can be performed on that field without Pioneer.
 
-**three_way_summary.csv** is intentionally absent until the matched standalone comparator has actually been trained and evaluated on Pioneer. Do not fill it with historical ABMIL results: they derive from another training/evaluation configuration.
+## Training-time provenance
 
-## Running the missing non-fused comparator
+- [`final_results/training_job_times.csv`](training_job_times.csv) lists 18 completed candidate generation/fused continuation SLURM jobs from the archived November 23, 2026, Pioneer logs, each with exit code 0:0.
+- [`final_results/timing_summary.csv`](timing_summary.csv) aggregates candidate generation and fusion continuation. Candidate training was **shared** between both fusion methods; do not double-count it as two separate training runs.
+- [`final_results/standalone_job_times.csv`](standalone_job_times.csv) records the completed November 25, 2026 standalone training jobs 4313829–4313834 and held-out evaluation job 4313835, all exit code 0:0. The evaluation job ran all six models together; do not assign its full elapsed time to any individual model or compare it directly with a single fusion continuation job.
 
-The original proposal included a three-arm comparison: standalone MIL vs. baseline fusion vs. stability-aware fusion. The completed data only compare the latter two. To complete the missing arm using the existing five candidate checkpoint sets, from Pioneer in the project folder:
+Job `Elapsed` represents recorded cluster wall time, **not** GPU-hours, a normalized benchmark, or a complete end-to-end experiment cost. These summaries exclude queue waiting, initial data preparation, separately executed offline checkpoint merging, and other unrecorded overhead.
+
+## Reproduction and verification
+
+Source: `standalone_comparison.py` selects each architecture's single best weighted-mean early-validation-AUC candidate from five candidates, trains two more effective epochs using the corresponding fusion continuation function without merging weights, and evaluates using the same test-split and AUC scoring logic as the fused models. No ABMIL model was modified or measured within this matched experiment.
+
+All seven new SLURM jobs completed successfully, and the summary was generated on Pioneer. Re-running `bash submit_standalone_all.sh` is **not necessary** and must not overwrite the completed checkpoints or published CSVs.
+
+To verify all published statistics **without a GPU**, run:
 
 ```bash
-mkdir -p logs
-for arch in clam dsmil; do
-  for seed in 1 2 3; do
-    sbatch --export=ALL,STAGE=train,ARCH="$arch",SEED="$seed" standalone_comparison.slurm
-  done
-done
+python3 verify_published_results.py
+python3 verify_project2_additions.py
+python3 verify_three_way.py
 ```
 
-After all six jobs finish successfully:
-
-```bash
-sbatch --export=ALL,STAGE=evaluate standalone_comparison.slurm
-# After the evaluation job completes successfully:
-python3 standalone_comparison.py summarize
-```
-
-This selects the single best weighted-mean-early-validation-AUC candidate (no parameter merging), continues it for the same two effective epochs as fusion, and evaluates the held-out test split on the same 128 slides. Those runs will generate new model checkpoints and AUC observations. **Their results are not present until the jobs actually run.**
-
-The original ABMIL single-run AUC remains historical context; ABMIL was not modified or re-evaluated by the stability-aware CLAM/DSMIL extension.
+These consistency checks cannot independently reproduce model training, guarantee test/validation design independence, audit patient-level disjointness, or validate withheld checkpoint histories. No significance test or broad reliability benefit is claimed from three seeds.
