@@ -27,3 +27,6 @@ The course requires: a standard research paper with cover page, abstract (maximu
 - Historical ABMIL test AUC 0.8802 is from an inherited single-run baseline; it is not comparable under the current fusion protocol.
 
 The repository and drafts should not claim the original proposal is *entirely complete* until the standalone measurements and human submission checks are finished.
+
+
+**Simplified launch for the missing experiment:** After synchronizing Pioneer with `origin/main`, run `bash submit_standalone_all.sh` to queue the six standalone training jobs and a dependent held-out evaluation. Only after it succeeds, run `python3 standalone_comparison.py summarize` and inspect/commit the measured CSV. This does not execute automatically through GitHub.
