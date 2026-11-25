@@ -6,14 +6,14 @@ The course requires: a standard research paper with cover page, abstract (maximu
 
 - CAMELYON16 classification using CLAM and DSMIL and 512-dimensional patch features; 215 training, 54 validation, and 128 held-out slides.
 - Early candidate validation histories, stability-aware ranking, top-three TIES-style parameter merging, and two effective continuation training epochs.
-- Three seeds per architecture, two fusion selection methods, and **12** held-out test ROC-AUC measurements.
+- Three seeds per architecture across **three completed methods**: standalone MIL, baseline fusion, and stability-aware fusion, totaling **18** held-out test ROC-AUC measurements (12 fusion + six standalone).
 - Mean, sample SD, minimum test AUC, highest validation-selected AUC, paired test differences, and observed CLAM/DSMIL trade-offs.
 - Archived SLURM times for five-candidate generation and fused continuation runs, with original job IDs. This is *partial workflow time*, not a complete cost measurement.
 - Updated README, code audit and CSV verifier. **ABMIL was neither modified nor reevaluated** in the stability-aware extension; the individual proposal required an attention-based MIL approach, not a specific ABMIL experiment.
 
-## Still outstanding (cannot honestly be declared complete)
+## Experimental completion and remaining nonexperimental tasks
 
-1. **Non-fused standalone MIL arm.** The individual proposal promised a three-way comparison: standalone, baseline fusion, stability-aware fusion. The new `standalone_comparison.py` and `standalone_comparison.slurm` implement the missing workflow from existing candidate checkpoints, but **GPU runs and measured AUCs are pending**. Run six continuation jobs and one joint evaluator on Pioneer. Once measured, commit `final_results/three_way_summary.csv`.
+1. **Standalone MIL arm completed.** Six model continuation jobs (4313829–4313834) and the shared held-out evaluator (4313835) completed on Pioneer on November 25, 2026, all exit 0:0. Their results are committed at `heldout_evaluation/standalone_auc_results.csv` and `final_results/three_way_summary.csv`; GPU jobs need no resubmission. Results are descriptive, with three seeds per method.
 2. **Fully measured computation time.** Offline checkpoint-merging time, queue time and per-method evaluation overhead were not captured. Present current timings only as measured candidate + continuation times.
 3. **Group attribution.** The second author's name and member-by-member technical contributions must be confirmed. Leave placeholders in the draft until confirmed.
 4. **Course submission.** The report and presentation drafts generated in ChatGPT need final review and Canvas submission. The report is nine pages total: cover + six body pages + references + appendix. The presentation is 14 slides.
@@ -26,7 +26,7 @@ The course requires: a standard research paper with cover page, abstract (maximu
 - CLAM's smaller SD mostly reflects the drop of its best-performing seed, *not* improvement of the worst seed. With n=3 there is no general statistically established reliability benefit.
 - Historical ABMIL test AUC 0.8802 is from an inherited single-run baseline; it is not comparable under the current fusion protocol.
 
-The repository and drafts should not claim the original proposal is *entirely complete* until the standalone measurements and human submission checks are finished.
+The three-method experimental comparison is complete and published, but the entire course submission should not be called finished until other required materials and human submission checks are completed.
 
 
-**Simplified launch for the missing experiment:** After synchronizing Pioneer with `origin/main`, run `bash submit_standalone_all.sh` to queue the six standalone training jobs and a dependent held-out evaluation. Only after it succeeds, run `python3 standalone_comparison.py summarize` and inspect/commit the measured CSV. This does not execute automatically through GitHub.
+**Reproduction only:** `bash submit_standalone_all.sh` submits the standalone training and evaluation workflow, but the seven November 25 jobs have already completed; do not rerun or overwrite their outputs. Reproducibility checks are documented in `final_results/PROVENANCE.md`.
