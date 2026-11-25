@@ -1,0 +1,7 @@
+architecture,seed,test_auc,test_samples,checkpoint
+clam,1,0.7844644750795334,128,weights/clam/20261122212201489441/standalone_results/seed_1/best_validation.pth
+clam,2,0.7022799575821844,128,weights/clam/20261123122950019167/standalone_results/seed_2/best_validation.pth
+clam,3,0.6972428419936373,128,weights/clam/20261123122950435501/standalone_results/seed_3/best_validation.pth
+dsmil,1,0.6436903499469777,128,weights/dsmil/20261123114547431845/standalone_results/seed_1/best_validation.pth
+dsmil,2,0.5641569459172853,128,weights/dsmil/20261123123022171992/standalone_results/seed_2/best_validation.pth
+dsmil,3,0.6630434782608695,128,weights/dsmil/20261123123007990510/standalone_results/seed_3/best_validation.pth
