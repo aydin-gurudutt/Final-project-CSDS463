@@ -1,0 +1,20 @@
+name: Verify Project 2 Published Results
+on:
+  push:
+    branches: [main, project2/completion-audit-2026]
+  pull_request:
+    branches: [main]
+jobs:
+  check-results:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate published fusion summaries
+        run: python verify_published_results.py
+      - name: Validate extended statistics and SLURM durations
+        run: python verify_project2_additions.py
+      - name: Check standalone experiment syntax
+        run: python -m py_compile standalone_comparison.py
