@@ -435,9 +435,20 @@ The original baseline work and implementations are acknowledged separately from 
 
 The proposal-requested **minimum held-out test AUC** and **highest validation-selected AUC** are now available for each CLAM/DSMIL fusion method in [`final_results/performance_extended.csv`](final_results/performance_extended.csv). Archived SLURM per-run timings and partial runtime summaries are in [`final_results/training_job_times.csv`](final_results/training_job_times.csv) and [`final_results/timing_summary.csv`](final_results/timing_summary.csv). See [results provenance](final_results/PROVENANCE.md) for definitions, original job IDs, and limitations; these timings exclude offline merging and final inference.
 
-The original proposal additionally called for a **non-fused standalone MIL** comparator, which is not part of the previously published 12-model fusion evaluation. [`standalone_comparison.py`](standalone_comparison.py) and [`standalone_comparison.slurm`](standalone_comparison.slurm) implement that missing matched experiment using the original five candidate models per seed, selecting the best one by early weighted mean validation AUC and continuing it for the same two epochs **without merging**. Its six GPU runs and measured test AUCs are still **pending**, and must not be replaced with the historical ABMIL single-run result. After the jobs have been completed, `python3 standalone_comparison.py summarize` generates a three-way comparison.
+The original proposal's **non-fused standalone MIL** comparator has now been trained and evaluated using [`standalone_comparison.py`](standalone_comparison.py). Six continuation jobs and one shared held-out evaluation completed on Pioneer on November 25, 2026. This comparator selects the best candidate by weighted early mean validation AUC and continues training for the same two effective epochs **without parameter merging**. The new [`heldout_evaluation/standalone_auc_results.csv`](heldout_evaluation/standalone_auc_results.csv) contains all six raw 128-slide test AUC measurements; [`final_results/three_way_summary.csv`](final_results/three_way_summary.csv) reports all three methods across three seeds.
+
+| Architecture | Method | Mean held-out test ROC AUC ± sample SD | Minimum test ROC AUC |
+|---|---|---:|---:|
+| CLAM | Standalone | 0.7280 ± 0.0490 | 0.6972 |
+| CLAM | Baseline fusion | 0.7279 ± 0.0566 | 0.6949 |
+| CLAM | Stability-aware fusion | 0.7103 ± 0.0259 | 0.6949 |
+| DSMIL | Standalone | 0.6236 ± 0.0524 | 0.5642 |
+| DSMIL | Baseline fusion | 0.6205 ± 0.0570 | 0.5618 |
+| DSMIL | Stability-aware fusion | 0.6219 ± 0.0571 | 0.5618 |
+
+The standalone method achieved the highest observed mean and minimum test AUC for both architectures. With only three seeds, these are descriptive comparisons, **not** statistical proof of superiority. Archived standalone training/evaluation timings and job identifiers are recorded in [`final_results/standalone_job_times.csv`](final_results/standalone_job_times.csv). Validate all three methods with `python3 verify_three_way.py`; the original checkpoint files remain excluded from GitHub. Historical ABMIL results were not obtained under this matched protocol and are not included.
 
 A detailed [Project 2 completion and submission checklist](PROJECT2_COMPLETION.md) tracks experimental, reporting, attribution, and Canvas requirements. Generate a source-code submission archive locally with `bash package_project2_code.sh` after synchronizing the repository with Pioneer. Neither the compiled course report nor its PowerPoint presentation is part of this source-only Git repository as of this update.
 
 
-**Simplified Pioneer submission:** `bash submit_standalone_all.sh` queues the six required non-fused training jobs and schedules held-out evaluation with a SLURM `afterok` dependency; run `python3 standalone_comparison.py summarize` only after evaluation completes. This command requires the original ignored candidate checkpoints on Pioneer.
+**Reproduction on Pioneer:** `bash submit_standalone_all.sh` can be used to generate a fresh standalone comparison from the original ignored candidate checkpoints, but must **not** be rerun over the completed outputs. The recorded November 25 jobs have already finished successfully.
