@@ -1,7 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=ensemble_A_summary
 #SBATCH --account=ccipd
-#SBATCH --partition=cpu
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=8G
 #SBATCH --time=00:10:00
