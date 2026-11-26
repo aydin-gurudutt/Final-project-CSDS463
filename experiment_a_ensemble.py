@@ -61,28 +61,60 @@ def checkpoint_for(arch, family, seed):
 
 
 def load_split():
+    """Resolve path-only train/val splits through the labeled master dataset."""
     import pandas as pd
-    train = pd.read_csv(ROOT / "train.csv")
-    val = pd.read_csv(ROOT / "val.csv")
-    test = pd.read_csv(ROOT / "test.csv")
-    for name, frame in (("train", train), ("val", val), ("test", test)):
-        if not {"path", "label"}.issubset(frame.columns):
-            raise ValueError(f"{name}.csv missing path or label column")
-        paths = frame["path"].astype(str).tolist()
-        if len(paths) != len(set(paths)) or len(paths) != len({Path(p).name for p in paths}):
-            raise ValueError(f"Duplicate slide IDs in {name}.csv")
+    master = pd.read_csv(ROOT / "camelyon16.csv")
+    if not {"path", "label"}.issubset(master.columns):
+        raise ValueError("Master dataset must contain path and label")
+    if master["path"].isna().any() or master["label"].isna().any():
+        raise ValueError("Null master paths or labels")
+    master = master.copy()
+    master["path"] = master["path"].astype(str).str.strip()
+    if not master["path"].is_unique:
+        raise ValueError("Duplicate paths in master dataset")
+    if master["path"].map(lambda x: Path(x).name).duplicated().any():
+        raise ValueError("Duplicate slide basenames in master dataset")
+    master_labels = master["label"].astype(int)
+    if not master_labels.eq(master["label"]).all() or set(master_labels.tolist()) != {0, 1}:
+        raise ValueError("Master labels must be binary")
+    master["label"] = master_labels
+    master_index = master.set_index("path")["label"]
+
+    frames = {}
+    for name in ("train", "val", "test"):
+        frame = pd.read_csv(ROOT / f"{name}.csv")
+        if "path" not in frame.columns or frame["path"].isna().any():
+            raise ValueError(f"{name}.csv requires non-null path column")
+        if frame["path"].astype(str).str.strip().duplicated().any():
+            raise ValueError(f"Duplicate slide paths in {name}.csv")
+        frame = frame.copy()
+        frame["path"] = frame["path"].astype(str).str.strip()
+        lookup = frame["path"].map(master_index)
+        if lookup.isna().any():
+            missing = frame.loc[lookup.isna(), "path"].tolist()
+            raise ValueError(f"{name} contains paths absent from master: {missing[:3]}")
+        if "label" in frame.columns:
+            if frame["label"].isna().any():
+                raise ValueError(f"Null labels in {name}")
+            actual = frame["label"].astype(int)
+            if not actual.eq(frame["label"]).all() or not actual.eq(lookup.astype(int)).all():
+                raise ValueError(f"{name} labels conflict with master dataset")
+        frame["label"] = lookup.astype(int).to_numpy()
+        if frame["path"].map(lambda p: Path(p).name).duplicated().any():
+            raise ValueError(f"Duplicate slide basenames in {name}")
+        frames[name] = frame
+
+    train, val, test = (frames[n] for n in ("train", "val", "test"))
     names = lambda df: {Path(str(p)).name for p in df["path"]}
     if names(val) & (names(train) | names(test)) or names(train) & names(test):
         raise ValueError("Cross-split slide filename overlap")
     if len(train) != 215 or len(val) != 54 or len(test) != 128:
         raise ValueError(f"Unexpected split sizes: train={len(train)} val={len(val)} test={len(test)}")
-    if val["path"].isna().any() or val["label"].isna().any():
-        raise ValueError("Null validation values")
-    labels = val["label"].astype(int)
-    if not labels.eq(val["label"]).all() or set(labels.tolist()) != {0, 1}:
-        raise ValueError("Validation labels must be binary and contain both classes")
-    val = val.copy()
-    val["label"] = labels
+    all_paths = set(train["path"]) | set(val["path"]) | set(test["path"])
+    if len(all_paths) != len(master) or all_paths != set(master["path"]):
+        raise ValueError("Splits do not partition the master dataset exactly")
+    if set(val["label"].tolist()) != {0, 1}:
+        raise ValueError("Validation split must contain both classes")
     return val
 
 
