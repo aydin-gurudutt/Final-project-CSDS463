@@ -26,11 +26,13 @@ This folder contains six vector **SVG figures** tracked directly in GitHub. **Th
 
 ## Generating local PNG/PDF exports
 
-Use the bundled `create_paper_figures.py` script from the ChatGPT paper figure package in the project root and execute:
+Use the tracked plotting script from the repository root on Pioneer:
 
 ```bash
-python create_paper_figures.py --root . --out final_results/paper_figures
+python paper_figures/plot_from_pioneer.py
 ```
+
+The script reads exact on-cluster CSVs and generates `paper_figures/exports/`.
 
 The script reads real saved CSVs and writes six 300-dpi PNGs and six vector PDFs. The files in this GitHub folder are **SVG companions**, not byte-identical copies of the local package exports.
 
