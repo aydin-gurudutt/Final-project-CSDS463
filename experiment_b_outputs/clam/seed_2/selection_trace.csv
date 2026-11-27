@@ -1,0 +1,2 @@
+step,action,candidate,selected,validation_auc,delta
+0,initial,1,[1],0.7826704545454546,0

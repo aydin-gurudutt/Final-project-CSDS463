@@ -1,0 +1,30 @@
+{
+  "experiment": "B: greedy arithmetic checkpoint soup",
+  "architecture": "abmil",
+  "seed": 2,
+  "candidate_paths": [
+    "weights/abmil/20261125152841024449/candidates/candidate_0.pth",
+    "weights/abmil/20261125152841024449/candidates/candidate_1.pth",
+    "weights/abmil/20261125152841024449/candidates/candidate_2.pth",
+    "weights/abmil/20261125152841024449/candidates/candidate_3.pth",
+    "weights/abmil/20261125152841024449/candidates/candidate_4.pth"
+  ],
+  "validation_slides": 54,
+  "single_candidate_auc": [
+    0.5085227272727273,
+    0.5127840909090908,
+    0.4758522727272727,
+    0.484375,
+    0.484375
+  ],
+  "best_single_auc": 0.5127840909090908,
+  "selected_indices": [
+    1
+  ],
+  "greedy_validation_auc": 0.5127840909090908,
+  "delta_vs_best_single": 0.0,
+  "selected_checkpoint": "experiment_b_outputs/abmil/seed_2/greedy_soup.pth",
+  "heldout_test_accessed": false,
+  "post_merge_training": false,
+  "selection_auc_optimistically_biased": true
+}

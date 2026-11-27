@@ -1,0 +1,30 @@
+{
+  "experiment": "B: greedy arithmetic checkpoint soup",
+  "architecture": "dsmil",
+  "seed": 1,
+  "candidate_paths": [
+    "weights/dsmil/20261123114547431845/candidates/candidate_0.pth",
+    "weights/dsmil/20261123114547431845/candidates/candidate_1.pth",
+    "weights/dsmil/20261123114547431845/candidates/candidate_2.pth",
+    "weights/dsmil/20261123114547431845/candidates/candidate_3.pth",
+    "weights/dsmil/20261123114547431845/candidates/candidate_4.pth"
+  ],
+  "validation_slides": 54,
+  "single_candidate_auc": [
+    0.5667613636363636,
+    0.5454545454545454,
+    0.5525568181818182,
+    0.5767045454545454,
+    0.5838068181818181
+  ],
+  "best_single_auc": 0.5838068181818181,
+  "selected_indices": [
+    4
+  ],
+  "greedy_validation_auc": 0.5838068181818181,
+  "delta_vs_best_single": 0.0,
+  "selected_checkpoint": "experiment_b_outputs/dsmil/seed_1/greedy_soup.pth",
+  "heldout_test_accessed": false,
+  "post_merge_training": false,
+  "selection_auc_optimistically_biased": true
+}

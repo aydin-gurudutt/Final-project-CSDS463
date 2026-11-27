@@ -1,0 +1,51 @@
+{
+  "experiment": "A: fixed equally weighted prediction-level ensemble",
+  "split": "validation_only",
+  "seed": 2,
+  "n_validation_slides": 54,
+  "model_family_count": 2,
+  "checkpoint_records": {
+    "standalone/clam": {
+      "checkpoint": "weights/clam/20261123122950019167/standalone_results/seed_2/best_validation.pth",
+      "history": "weights/clam/20261123122950019167/standalone_results/seed_2/history.json",
+      "recorded_best_validation_auc": 0.7485795454545454
+    },
+    "standalone/abmil": {
+      "checkpoint": "weights/abmil_fusions/seed_2/standalone/training/best_validation.pth",
+      "history": "weights/abmil_fusions/seed_2/standalone/training/history.json",
+      "recorded_best_validation_auc": 0.6732954545454546
+    },
+    "standalone/dsmil": {
+      "checkpoint": "weights/dsmil/20261123123022171992/standalone_results/seed_2/best_validation.pth",
+      "history": "weights/dsmil/20261123123022171992/standalone_results/seed_2/history.json",
+      "recorded_best_validation_auc": 0.5184659090909091
+    },
+    "baseline/clam": {
+      "checkpoint": "weights/clam/20261123122950019167/fusion_results/lambda_0.0_seed_2/best_validation.pth",
+      "history": "weights/clam/20261123122950019167/fusion_results/lambda_0.0_seed_2/history.json",
+      "recorded_best_validation_auc": 0.7471590909090909
+    },
+    "baseline/abmil": {
+      "checkpoint": "weights/abmil_fusions/seed_2/baseline/training/best_validation.pth",
+      "history": "weights/abmil_fusions/seed_2/baseline/training/history.json",
+      "recorded_best_validation_auc": 0.6633522727272727
+    },
+    "baseline/dsmil": {
+      "checkpoint": "weights/dsmil/20261123123022171992/fusion_results/lambda_0.0_seed_2/best_validation.pth",
+      "history": "weights/dsmil/20261123123022171992/fusion_results/lambda_0.0_seed_2/history.json",
+      "recorded_best_validation_auc": 0.5340909090909091
+    }
+  },
+  "ensemble_weights": {
+    "clam_abmil": [
+      0.5,
+      0.5
+    ],
+    "clam_abmil_dsmil": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "test_predictions_generated": false
+}

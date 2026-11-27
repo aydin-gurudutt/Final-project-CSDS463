@@ -1,0 +1,30 @@
+{
+  "experiment": "B: greedy arithmetic checkpoint soup",
+  "architecture": "clam",
+  "seed": 3,
+  "candidate_paths": [
+    "weights/clam/20261123122950435501/candidates/candidate_0.pth",
+    "weights/clam/20261123122950435501/candidates/candidate_1.pth",
+    "weights/clam/20261123122950435501/candidates/candidate_2.pth",
+    "weights/clam/20261123122950435501/candidates/candidate_3.pth",
+    "weights/clam/20261123122950435501/candidates/candidate_4.pth"
+  ],
+  "validation_slides": 54,
+  "single_candidate_auc": [
+    0.7926136363636365,
+    0.8025568181818182,
+    0.7443181818181818,
+    0.7684659090909092,
+    0.7585227272727272
+  ],
+  "best_single_auc": 0.8025568181818182,
+  "selected_indices": [
+    1
+  ],
+  "greedy_validation_auc": 0.8025568181818182,
+  "delta_vs_best_single": 0.0,
+  "selected_checkpoint": "experiment_b_outputs/clam/seed_3/greedy_soup.pth",
+  "heldout_test_accessed": false,
+  "post_merge_training": false,
+  "selection_auc_optimistically_biased": true
+}

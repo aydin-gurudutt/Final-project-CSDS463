@@ -1,0 +1,10 @@
+architecture,seed,method,lambda,validation_auc,test_auc,test_samples,positive_slides,negative_slides,checkpoint
+ABMIL,1,Standalone,,0.6107954545454546,0.4498939554612938,128,46,82,weights/abmil_fusions/seed_1/standalone/training/best_validation.pth
+ABMIL,1,Baseline,0.0,0.5951704545454546,0.4597030752916225,128,46,82,weights/abmil_fusions/seed_1/baseline/training/best_validation.pth
+ABMIL,1,Stability-aware,2.0,0.5951704545454546,0.4597030752916225,128,46,82,weights/abmil_fusions/seed_1/stability/training/best_validation.pth
+ABMIL,2,Standalone,,0.6732954545454546,0.6595970307529162,128,46,82,weights/abmil_fusions/seed_2/standalone/training/best_validation.pth
+ABMIL,2,Baseline,0.0,0.6633522727272727,0.6580063626723224,128,46,82,weights/abmil_fusions/seed_2/baseline/training/best_validation.pth
+ABMIL,2,Stability-aware,2.0,0.6633522727272727,0.6580063626723224,128,46,82,weights/abmil_fusions/seed_2/stability/training/best_validation.pth
+ABMIL,3,Standalone,,0.6860795454545455,0.8011664899257688,128,46,82,weights/abmil_fusions/seed_3/standalone/training/best_validation.pth
+ABMIL,3,Baseline,0.0,0.6860795454545455,0.8022269353128314,128,46,82,weights/abmil_fusions/seed_3/baseline/training/best_validation.pth
+ABMIL,3,Stability-aware,2.0,0.6860795454545455,0.8016967126193001,128,46,82,weights/abmil_fusions/seed_3/stability/training/best_validation.pth
